@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-        
-        <title>swipe test</title>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+		
+		<title>swipe test</title>
 
-        <script src="xui.js" type="application/javascript" charset="utf-8"></script>
-        <script src="xui.drag.js" type="application/javascript" charset="utf-8"></script>
+		<script src="xui.js" type="application/javascript" charset="utf-8"></script>
+		<script src="xui.drag.js" type="application/javascript" charset="utf-8"></script>
 		<style type="text/css">
 			body {
 				font: 10px Arial, sans-serif;
@@ -17,20 +17,20 @@
 				position: absolute;
 				top: 10%;
 				left: 10%;
-			    height: 80%;
+				height: 80%;
 				width: 80%;
 				background: #cccc00;
 			}
 			#drag-test {
-				position: absolute;
+				position: relative;
 				top: 100px;
 				left: 100px;
-			    height: 40px;
+				height: 40px;
 				width: 40px;
 				background: #4444ff;
 			}
 		</style>
-        <script type="text/javascript">
+		<script type="text/javascript">
 function init ()
 {
 	x$("#drag-test").drag(
@@ -49,18 +49,15 @@ var _timer=setInterval(function(){
 		clearInterval(_timer)
 		init() // call target function
 	}}, 10)
-        </script>
-    </head>
-    <body>
-    
-        <div id="zone-test" class="test">
-         Drag example : Parent div has % placement ... <br />
-         
-         
+		</script>
+	</head>
+	<body>
+	
+		<div id="zone-test" class="test">
+			Drag example : Parent div has % placement ... <br />
 			<div id="drag-test">
 				drag me
 			</div>
-            
-        </div>
-    </body>
+		</div>
+	</body>
 </html>
